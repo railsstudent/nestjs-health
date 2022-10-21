@@ -9,7 +9,7 @@
     "target": "es2017",
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./",
+    "rootDir": "./lib",
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
@@ -24,5 +24,7 @@
     "noUnusedParameters": true,
     "noUnusedLocals": true,
     "noUncheckedIndexedAccess": true
-  }
+  },
+  "include": ["lib/**/*"],
+  "exclude": ["dist", "test", "node_modules"]
 }
