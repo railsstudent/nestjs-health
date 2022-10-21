@@ -10,6 +10,7 @@
     "url": "https://github.com/railsstudent/nestjs-health.git"
   },
   "homepage": "https://github.com/railsstudent/nestjs-health#readme",
+  "main": "./dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",

@@ -1,13 +1,14 @@
 import { Controller, Get } from '@nestjs/common';
-import { HealthCheckService, HttpHealthIndicator, HealthCheck, HealthCheckResult } from '@nestjs/terminus';
+import { HealthCheck, HealthCheckResult } from '@nestjs/terminus';
+import { HealthService } from '../services';
 
 @Controller('health')
 export class HealthController {
-  constructor(private health: HealthCheckService, private http: HttpHealthIndicator) {}
+  constructor(private health: HealthService) {}
 
   @Get()
   @HealthCheck()
   check(): Promise<HealthCheckResult> {
-    return this.health.check([() => this.http.pingCheck('nestjs-docs', 'https://docs.nestjs.com')]);
+    return this.health.check();
   }
 }
