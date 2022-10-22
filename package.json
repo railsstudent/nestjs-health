@@ -1,6 +1,6 @@
 {
   "name": "nestjs-health",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Create a NestJS health check library",
   "author": "Connie Leung",
   "license": "MIT",
@@ -11,6 +11,15 @@
   },
   "homepage": "https://github.com/railsstudent/nestjs-health#readme",
   "main": "./dist/index.js",
+  "keywords": [
+    "nestjs",
+    "terminus",
+    "redis",
+    "bull",
+    "typeorm",
+    "microservices",
+    "application"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
